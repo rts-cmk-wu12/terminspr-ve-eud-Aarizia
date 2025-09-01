@@ -1,0 +1,28 @@
+@use '../../../variables';
+
+.site-footer {
+    padding: 0.78125rem 1.75rem;
+    background-color: variables.$color-foreground-light;
+
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__link {
+        display: block;
+        height: 2.5625rem;
+        aspect-ratio: 1;
+        border: 1px solid variables.$color-foreground-dark;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10rem;
+    }
+
+    &__icon {
+        height: 1.5rem;
+        width: 1.5rem;
+        color: variables.$color-foreground-dark;
+    }
+}

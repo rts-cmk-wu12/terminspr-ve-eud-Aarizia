@@ -1,0 +1,9 @@
+@use '../../variables';
+
+.activities {
+    
+    &__error-message {
+        color: variables.$color-foreground-light;
+        font-size: 1.125rem;
+    }
+}

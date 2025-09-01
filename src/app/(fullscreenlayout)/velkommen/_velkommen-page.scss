@@ -1,0 +1,43 @@
+@use '../../../variables';
+
+
+.welcome {
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr;
+    height: 100dvh;
+
+    &__text {
+        grid-row: 2 / 3;
+    }
+
+    &__heading {
+        font-size: 2.25rem;
+        color: variables.$color-brand-dark;
+        text-transform: uppercase;
+        margin-inline-start: 2.75rem;
+    
+        &--accent {
+            display: block;
+            color: variables.$color-brand-light;
+            font-size: 4.5rem;
+            text-transform: uppercase;
+            font-style: italic;
+            line-height: 65%;
+        }
+    }
+    
+    &__colored-line {
+        margin-block-start: 1rem;
+        width: 60%;
+        height: 1rem;
+        background-color: variables.$color-brand-medium;
+        box-shadow: variables.$box-shadow;
+    }
+
+    &__button-container {
+        grid-row: 3 / 4;
+        align-self: self-end;
+        justify-self: center;
+        padding-block-end: 3.3125rem;
+    }
+}
