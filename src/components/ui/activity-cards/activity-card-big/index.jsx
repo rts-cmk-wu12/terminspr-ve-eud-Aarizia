@@ -4,10 +4,10 @@ import './_activity-card-big.scss';
 
 export default function ActivityCardBig(data) {
 
-    console.log(data.data)
+    //console.log(data.data)
 
     return (
-        <Link href={`/aktiviteter/${data?.data?.id}`}>
+        <Link href={`/aktivitet/${data?.data?.id}`}>
             <article className="activity-card-big">
                 <Image 
                     src={data?.data?.asset?.url}

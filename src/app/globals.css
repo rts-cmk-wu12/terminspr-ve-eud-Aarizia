@@ -9,32 +9,10 @@ a {
   text-decoration: none;
 }
 
-@font-face {
-  font-family: 'Ubuntu';
-  src: 
-    local('Ubuntu'),
-    url('/fonts/ubuntu/Ubuntu-Regular.tff') format('ttf');
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: 
-    local('Ubuntu'),
-    url('/fonts/roboto/static/Roboto-Regular.tff') format('ttf');
-}
-
-@font-face {
-  font-family: 'RacingSansOne';
-  src: 
-    local('RacingSansOne'),
-    url('/fonts/racing-sans-one/RacingSansOne-Regular.tff') format('ttf');
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
 }
 
 body {
-  font-family: Ubuntu, sans-serif;
   max-width: 48rem;
-}
-
-body .welcome {
-  font-family: RacingSansOne, sans-serif;
 }

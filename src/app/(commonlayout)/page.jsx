@@ -5,7 +5,8 @@ import ActivityCardBig from '@/components/ui/activity-cards/activity-card-big';
 export default async function aktiviteterPage() {
 
   const data = await getActivities()
-  console.log(data)
+  //console.log(data)
+
   return (
     <main className='activities'>
       {data ? 

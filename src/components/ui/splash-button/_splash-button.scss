@@ -1,0 +1,25 @@
+@use '../../../variables';
+
+@keyframes grow {
+    to {
+        height: 3.375rem;
+        width: 15.5625rem;
+        opacity: 1;
+    }
+}
+
+.splash-button {
+    background-color: variables.$color-background-dark;
+    border: none;
+    box-shadow: variables.$box-shadow;
+    color: variables.$color-foreground-light;
+    //width: 15.5625rem;
+    //height: 3.375rem;
+    height: 1.125rem;
+    width: 10rem;
+    font-size: 1.125rem;
+    border-radius: 0.625rem;
+    font-family: inherit;
+    opacity: 0;
+    animation: grow 1.5s ease-in forwards;
+}

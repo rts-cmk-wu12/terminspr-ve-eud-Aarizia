@@ -1,0 +1,38 @@
+@use '../variables';
+
+.welcome__heading {
+    font-family: var(--font-roboto);
+}
+
+.welcome__heading__brand {
+    font-family: var(--font-racing-sans-one);
+}
+
+.common_font {
+    font-family: var(--font-ubuntu);
+}
+
+.button {
+    background-color: variables.$color-background-dark;
+    border: none;
+    box-shadow: variables.$box-shadow;
+    color: variables.$color-foreground-light;
+    width: 15.5625rem;
+    height: 3.375rem;
+    font-size: 1.125rem;
+    border-radius: 0.625rem;
+    font-family: inherit;
+    
+    &_disabled {
+        background-color: variables.$color-inactive;
+        border: none;
+        box-shadow: variables.$box-shadow;
+        color: variables.$color-foreground-light;
+        width: 15.5625rem;
+        height: 3.375rem;
+        font-size: 1.125rem;
+        border-radius: 0.625rem;
+        font-family: inherit;
+        color: variables.$color-foreground-dark;
+    }
+}

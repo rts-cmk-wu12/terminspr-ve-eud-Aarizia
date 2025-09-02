@@ -62,9 +62,3 @@ søgeside
     - søgning i de aktiviteter, som tilbydes
     - vis kun resultater efter der er søgt (enten onchange eller onscroll)
     - hvis ingen resultater, skriv: "Der blev ikke fundet nogle aktiviteter. Prøv at søge efter noget andet."
-
-
-ikoner
-<FiHome />
-<FiSearch />
-<FiCalendar />

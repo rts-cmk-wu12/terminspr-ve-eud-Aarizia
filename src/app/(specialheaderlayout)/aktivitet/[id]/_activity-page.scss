@@ -1,6 +1,6 @@
-@use '../../variables';
+@use '../../../../variables';
 
-.common-layout__wrapper {
+.activity-page__wrapper {
     background-color: variables.$color-background-dark;
     display: grid;
     grid-template-areas: 
@@ -17,7 +17,6 @@
         grid-area: header;
         grid-row: 1 / 2;
         grid-column: 1 / 4;
-        padding: 2rem 2rem 0.5rem 2rem;
         color: variables.$color-foreground-light;
     }
 
@@ -33,5 +32,23 @@
         grid-area: footer;
         grid-row: 3 / 4;
         grid-column: 1 / 4;
+    }
+}
+
+.activity {
+    padding: 1.125rem 1.7rem;
+    color: variables.$color-foreground-light;
+    font-size: 1.125rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    &__heading {
+        font-size: 1.5rem;
+    }
+
+    .line-break {
+        display: block;
+        padding-block-end: 1rem;
     }
 }

@@ -1,6 +1,12 @@
+export const metadata = {
+  title: 'Kalender'
+}
+
 export default function kalenderPage() {
 
     return (
-        <p>Kalender</p>
+        <main>
+            <p>Kalender</p>
+        </main>
     )
 }
