@@ -26,16 +26,15 @@ async function getApiData(endpoint, searchParams = {}) {
     }
 }
 
-/* async function getUserData(endpoint) {
-
-    const cookieStore = await cookies();
-    console.log(cookieStore);
+async function getUserData(endpoint, options) {
 
     const API_URL = new URL(endpoint, BASE_API_URL);
-    const options = {
+/*     const options = {
         method: 'GET',
-        Authorization: 'Bearer ' + access_token
-    }
+        headers: {
+            Authorization: 'Bearer ' + access_token
+        }
+    } */
 
     try {
         const response = await fetch(API_URL, options);
@@ -51,11 +50,17 @@ async function getApiData(endpoint, searchParams = {}) {
         console.error(error);
         throw new Error;
     }
-} */
+}
 
 const getActivities = () => getApiData('activities');
 const getSingleActivity = (id) => getApiData(`activities/${id}`);
-//const getCurrentUser = (id) => getUserData(`users/${id}`);
+const getCurrentUser = (id, access_token) => getUserData(`users/${id}`, { 
+    method: 'GET',
+        headers: {
+            Authorization: 'Bearer ' + access_token
+        }}
+);
+
 
 export {
     getActivities,

@@ -4,7 +4,7 @@ export default async function middleware(request) {
     
     const {pathname} = request.nextUrl;
 
-    if (pathname.includes('/velkommen') || pathname.includes('/log-ind') /* || pathname === '/' || pathname.includes('/aktivitet') */) {
+    if (pathname.includes('/velkommen') /* || pathname.includes('/log-ind') */ /* || pathname === '/' || pathname.includes('/aktivitet') */) {
         return;
     }
 

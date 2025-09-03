@@ -23,6 +23,10 @@ export default function SiteHeader() {
                 setTitle('Kalender');
                 break;
 
+            case pathname === '/kalender/hold-oversigt':
+                setTitle('Hold oversigt');
+                break;
+
         }
     }, [pathname]);
 

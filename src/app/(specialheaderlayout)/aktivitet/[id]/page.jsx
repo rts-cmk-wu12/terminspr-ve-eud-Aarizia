@@ -1,6 +1,4 @@
-import SiteHeaderSpecial from "@/components/ui/headers/site-header-special";
-import SiteFooter from "@/components/ui/site-footer";
-import styles from '../../../page.module.scss';
+
 import './_activity-page.scss';
 import { getCurrentUser, getSingleActivity } from "@/utilities/getApiData";
 import { notFound } from "next/navigation";
@@ -26,18 +24,21 @@ export default async function aktivitetsDetaljerPage({ params }) {
     const userId = cookieStore.get('landrupdans_userId');
     const userRole = cookieStore.get('landrupdans_userRole');
     const access_token = cookieStore.get('landrupdans_access_token');
-
-    //console.log('userId: ', userId, 'userRole: ', userRole, 'access_token: ', access_token);
-    //console.log(data)
+    const userData = await getCurrentUser(userId?.value, access_token?.value);
+    
+    //userData && console.log('userData: ', userData);
+    //console.log('userId: ', userId);
+    //console.log('userRole: ', userRole);
+    //console.log('access_token: ', access_token);
+    //console.log(activityData)
 
     if (!activityData) {
         notFound();
     }
 
-    return (
-        activityData && userId && access_token && userRole ? 
-            <ActivityContent activityData={activityData} userId={userId} access_token={access_token} userRole={userRole} />
-        : activityData ? <ActivityContent activityData={activityData}/>
-        : null
+    return userData ? (
+        <ActivityContent activityData={activityData} userData={userData} access_token={access_token.value} userId={userId.value} userRole={userRole.value} /* userRole={userRole.value} */ />
+    ) : (
+        <ActivityContent activityData={activityData} />
     )
 }
