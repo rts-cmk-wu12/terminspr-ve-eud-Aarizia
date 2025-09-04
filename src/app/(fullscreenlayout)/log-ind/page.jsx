@@ -2,6 +2,7 @@ import OverlayCanvas from "@/components/ui/overlay-canvas";
 import './_login-page.scss';
 import styles from '../../page.module.scss';
 import LoginForm from "@/components/ui/forms/login-form";
+import Link from "next/link";
 
 export const metadata = {
   title: 'Log ind'

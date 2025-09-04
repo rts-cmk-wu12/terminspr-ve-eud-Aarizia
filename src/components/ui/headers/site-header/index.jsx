@@ -27,6 +27,10 @@ export default function SiteHeader() {
                 setTitle('Hold oversigt');
                 break;
 
+            case /^\/kvittering\/[a-zA-Z0-9]+$/.test(pathname):
+                setTitle('Kvittering')
+                break; 
+
         }
     }, [pathname]);
 

@@ -1,0 +1,10 @@
+@use '../../../variables';
+
+.calendar {
+    padding: 0.5rem 1.7rem;
+
+    &__text {
+        font-size: 1.125rem;
+        color: variables.$color-foreground-light;
+    }
+}

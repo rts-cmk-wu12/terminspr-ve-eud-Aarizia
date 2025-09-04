@@ -1,7 +1,9 @@
+@use '../../../../variables';
+
 .site-header-special {
     display: grid;
     grid-template-rows: 1fr auto;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr auto auto;
     max-height: 30rem;
 
     &__image {
@@ -18,5 +20,20 @@
         grid-row: 2 / 3;
         grid-column: 2 / 4;
         margin: 1.7rem;
+    }
+
+    &__error-message {
+        grid-row: 3 / 4;
+        grid-column: 1 / 4;
+        padding: 0.5rem 1.7rem;
+        background-color: variables.$color-background-light;
+        width: 100%;
+        
+        &-general {
+            background-color: none;
+            color: red;
+            grid-row: 3 / 4;
+            grid-column: 1 / 4;
+        }
     }
 }

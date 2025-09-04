@@ -2,9 +2,10 @@
 
 .overlay-canvas {
     position: fixed;
-        bottom: 1rem;
+        //bottom: 1rem;
     width: 30rem;
     height: 47.25rem;
+    //height: 77.25rem;
     z-index: -5;
     background: variables.$color-dark-overlay;
     transform: rotate(69.5deg);

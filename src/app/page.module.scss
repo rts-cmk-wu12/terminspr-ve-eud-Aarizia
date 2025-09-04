@@ -35,4 +35,16 @@
         font-family: inherit;
         color: variables.$color-foreground-dark;
     }
+    
+    &_light {
+        background-color: variables.$color-foreground-light;
+        color: variables.$color-background-dark;
+        box-shadow: variables.$box-shadow;
+        width: 15.5625rem;
+        height: 3.375rem;
+        font-size: 1.125rem;
+        border-radius: 0.625rem;
+        font-family: inherit;
+        border: none;
+    }
 }

@@ -17,4 +17,16 @@
         font-size: 3rem;
         color: variables.$color-foreground-light;
     }
+
+    &__create-user {
+        font-size: 1.125rem;
+        align-self: center;
+        color: variables.$color-foreground-light;
+        
+        &-link {
+            text-decoration: underline;
+            color: variables.$color-background-dark;
+            font-weight: bold;
+        }
+    }
 }

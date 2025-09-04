@@ -11,8 +11,8 @@ export default function ActivityCardBig(data) {
             <article className="activity-card-big">
                 <Image 
                     src={data?.data?.asset?.url}
-                    height={344}
-                    width={356}
+                    height={742}
+                    width={768}
                     alt="background-image"
                     className="activity-card-big__image"
                 />

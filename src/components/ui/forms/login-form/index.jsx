@@ -4,6 +4,7 @@ import './_login-form.scss';
 import styles from '../../../../app/page.module.scss';
 import { useActionState, useEffect } from 'react';
 import loginFormAction from '@/actions/login-form-action';
+import Link from 'next/link';
 
 export default function LoginForm() {
 
@@ -18,7 +19,7 @@ export default function LoginForm() {
     }, [formState]);
 
     return isPending ? (
-        <p>Indlæser...</p>
+        <p className='form-loading-text'>Indlæser...</p>
     ) : (
         <form className="form" action={formAction}>
             <div>
@@ -35,6 +36,10 @@ export default function LoginForm() {
             </div>
             <p>{formState?.errors}</p>
             <button className={`${styles.button} form__button`} type="submit">Log ind</button>
+            <div>
+                <p className='form__error-message-general'>{formState?.errors}</p>
+            </div>
+            <p className="login__create-user">Har du ikke en bruger? Opret dig <Link className="login__create-user-link" href='/opret-bruger'>her</Link></p>
         </form>
     );
 }

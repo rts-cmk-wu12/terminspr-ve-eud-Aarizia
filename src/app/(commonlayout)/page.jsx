@@ -2,10 +2,15 @@ import { getActivities } from '@/utilities/getApiData';
 import './_activities-page.scss';
 import ActivityCardBig from '@/components/ui/activity-cards/activity-card-big';
 
+export const metadata = {
+  title: 'Aktiviteter'
+}
+
 export default async function aktiviteterPage() {
 
   const data = await getActivities()
-  //console.log(data)
+  
+  //data && console.log(data)
 
   return (
     <main className='activities'>
@@ -20,7 +25,7 @@ export default async function aktiviteterPage() {
           })}
         </ul>
         :
-        <p className='activities__error-message'>Der er sket en fejl på serveren. Vi beklager ulejligheden. Prøv igen senere.</p>
+        <p>Indlæser...</p>
       }
     </main>
     

@@ -24,6 +24,9 @@ export default async function loginFormAction(prevState, formData) {
         ...(z.treeifyError(validated.error))
     }
 
+    //return validated;
+
+    // lav access token
     const response = await fetch("http://localhost:4000/auth/token", {
         "method": "POST",
         "headers": {
@@ -34,8 +37,14 @@ export default async function loginFormAction(prevState, formData) {
             "password": `${validated.data.password}` 
         })
     })
+
+    if (!response.ok) return {
+        success: false,
+        errors: ['Noget gik galt på serveren. Prøv igen senere']
+    }
+
     const data = await response.json();
-    console.log('token response: ', data);
+    //console.log('token response: ', data);
 
     const cookieStore = await cookies();
     cookieStore.set({
@@ -53,9 +62,8 @@ export default async function loginFormAction(prevState, formData) {
     cookieStore.set({
         name: 'landrupdans_userRole',
         value: data.role,
-        maxAge:60*60
+        maxAge: 60*60
     });
     
-    //return validated;
     redirect('/');
 }

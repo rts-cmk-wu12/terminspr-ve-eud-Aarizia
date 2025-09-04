@@ -3,6 +3,7 @@
 .site-footer {
     padding: 0.78125rem 1.75rem;
     background-color: variables.$color-foreground-light;
+    box-shadow: variables.$box-shadow;
 
     &__menu {
         display: flex;
