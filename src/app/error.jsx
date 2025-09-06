@@ -17,8 +17,8 @@ export default function Error({ error, reset }) {
     return (
         <section className={`${styles.common_font} error`}>
             <h2>Ups, noget gik galt</h2>
-            <button className={styles.button_light} onClick={() => reset()}>Prøv igen</button>
-            <button className={styles.button_light} onClick={() => router.push('/')}>Tilbage til forsiden</button>
+            <button className={`${styles.button_light} error__button`} onClick={() => reset()}>Prøv igen</button>
+            <button className={`${styles.button_light} error__button`} onClick={() => router.push('/')}>Tilbage til forsiden</button>
         </section>
     )
 }

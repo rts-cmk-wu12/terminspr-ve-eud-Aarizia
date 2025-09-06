@@ -55,7 +55,7 @@ export default async function kalenderPage() {
                 {userData?.activities.map(activity => {
                     return (
                         <li key={activity.id}>
-                            <ActivityCardSmall activity={activity} userData={userData} pageState={pageState} />
+                            <ActivityCardSmall activity={activity} pageState={pageState} />
                         </li>
                     )
                 })}
@@ -63,7 +63,7 @@ export default async function kalenderPage() {
             {pageState === 'instructor' && !roster && <p className="calendar__text">Du har ingen aktiviteter i kalenderen</p>}
             {pageState === 'instructor' && roster && <ul>
                 <li>
-                    <ActivityCardSmall pageState={pageState} roster={roster} userData={userData} />
+                    <ActivityCardSmall pageState={pageState} roster={roster} />
                 </li>
             </ul>}
         </main>

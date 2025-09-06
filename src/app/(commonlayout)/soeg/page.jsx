@@ -1,14 +1,14 @@
-import SearchForm from "@/components/ui/forms/search-form";
+import SearchContent from "@/components/ui/search-content";
 
 export const metadata = {
   title: 'Søg'
 }
 
-export default function soegPage() {
+export default async function soegPage() {
 
     return (
         <main className="search">
-            <SearchForm />
+            <SearchContent />
         </main>
     )
 }

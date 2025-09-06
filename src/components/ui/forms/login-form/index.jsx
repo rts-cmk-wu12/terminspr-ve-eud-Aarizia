@@ -34,11 +34,8 @@ export default function LoginForm() {
                     <p className="form__error-message">{formState?.properties?.password?.errors}</p>
                 </label>
             </div>
-            <p>{formState?.errors}</p>
+            <p className='form__error-message-general'>{formState?.errors}</p>
             <button className={`${styles.button} form__button`} type="submit">Log ind</button>
-            <div>
-                <p className='form__error-message-general'>{formState?.errors}</p>
-            </div>
             <p className="login__create-user">Har du ikke en bruger? Opret dig <Link className="login__create-user-link" href='/opret-bruger'>her</Link></p>
         </form>
     );

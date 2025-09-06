@@ -19,7 +19,6 @@ export default async function SiteFooter() {
     if (userRole?.value === 'instructor') {
         pageState = PAGE_STATE_INSTRUCTOR;
     }
-    console.log(pageState);
 
     return (
         <footer className="site-footer">

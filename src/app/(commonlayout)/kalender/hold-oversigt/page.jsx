@@ -18,7 +18,7 @@ export default async function holdOversigtPage() {
     let pageState = PAGE_STATE_NO_USER; */
     let roster = null;
 
-    if (!userRole || userRole === 'default') {
+    if (!userRole || userRole?.value === 'default') {
         notFound();
     }
 

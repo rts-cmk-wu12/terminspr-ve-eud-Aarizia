@@ -40,7 +40,7 @@ export default async function loginFormAction(prevState, formData) {
 
     if (!response.ok) return {
         success: false,
-        errors: ['Noget gik galt på serveren. Prøv igen senere']
+        errors: ['Ugyldigt login. Prøv igen.']
     }
 
     const data = await response.json();

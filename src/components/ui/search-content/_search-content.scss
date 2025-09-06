@@ -1,0 +1,32 @@
+@use '../../../variables';
+
+.search-form {
+    display: flex;
+    padding: 1rem 1.7rem;
+
+    &__form-group {
+        width: 100%;
+    }
+
+    &__input {
+        width: 100%;
+        border: none;
+        padding: 0.75rem 1rem;
+        background-color: variables.$color-light-overlay;
+        color: variables.$color-foreground-light;
+    }
+    
+    &__button {
+        margin-inline-start: -2rem;
+        background-color: transparent;
+        border: none;
+        color: variables.$color-foreground-light;
+        font-size: 1.5rem;
+        padding-block-start: 0.25rem;
+    }
+
+    &__error-message {
+        padding: 0 1.7rem;
+        color: variables.$color-foreground-light;
+    }
+}
